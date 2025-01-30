@@ -1,0 +1,123 @@
+import React from "react";
+import Logo from "./Logo";
+import Link from "next/link";
+
+// const icons = [
+//     {
+//         // Icon: ,
+//         link: "",
+//     },
+// ];
+
+const links = [
+    {
+        title: "Services",
+        subLinks: [
+            {
+                linkName: "For Instructors",
+                link: "",
+            },
+            {
+                linkName: "For Learners",
+                link: "",
+            },
+        ],
+    },
+    {
+        title: "Media",
+        subLinks: [
+            {
+                linkName: "Blogs",
+                link: "",
+            },
+            {
+                linkName: "Resources",
+                link: "",
+            },
+        ],
+    },
+    {
+        title: "Legal",
+        subLinks: [
+            {
+                linkName: "Privacy Policy",
+                link: "",
+            },
+            {
+                linkName: "Terms and Conditions",
+                link: "",
+            },
+        ],
+    },
+];
+
+function Footer() {
+    return (
+        <footer className="bg-[#000E22] text-white">
+            <div className="flex gap-10 pl-[80px] pr-[52px]">
+                <div>
+                    <Logo color="white" />
+                    <p className="w-[323px]">
+                        Join us on this journey as we hel you refine your
+                        english knowledge
+                    </p>
+                </div>
+                <div className="flex-1">
+                    <div className="flex flex-col justify-between h-full gap-10 divide-y divide-white/20 ">
+                        <div className="flex gap-[49.34px]">
+                            <div className="grid grid-cols-3 gap-[49.34px]">
+                                {links.map((link, index) => {
+                                    return (
+                                        <div key={index} className="flex flex-col gap-10">
+                                            <p>{link.title}</p>
+                                            <ul className="flex flex-col gap-10">
+                                                {link.subLinks.map(
+                                                    (subLink, linkIndex) => {
+                                                        return (
+                                                            <Link
+                                                                href={
+                                                                    subLink.link
+                                                                }
+                                                                key={linkIndex}
+                                                            >
+                                                                {
+                                                                    subLink.linkName
+                                                                }
+                                                            </Link>
+                                                        );
+                                                    }
+                                                )}
+                                            </ul>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                            <div className="flex flex-col gap-5">
+                                <p>Reach us</p>
+                                <div>
+                                <p>
+                                    2972 Westheimer Rd. Santa Ana, Illinois
+                                    85486{" "}
+                                </p>
+                                <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex justify-between pt-[22px]">
+                            <p>
+                                Copyright 2025 TheenglishCliniq.io. All Rights
+                                Reserved
+                            </p>
+                            <div className="flex gap-4">
+                                <p>Terms & Conditions</p>
+                                <p>Privacy Policy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+}
+
+export default Footer;
