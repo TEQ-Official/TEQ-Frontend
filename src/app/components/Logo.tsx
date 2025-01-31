@@ -3,7 +3,7 @@ import React from "react";
 import LogoWhite from "../../../public/logo-white.svg";
 import LogoBlue from "../../../public/logo-blue.svg";
 
-function Logo({ color, className }: { color: string, className: string }) {
+function Logo({ color, className }: { color: string, className?: string }) {
     return (
         <div>
             {color === "white" ? (

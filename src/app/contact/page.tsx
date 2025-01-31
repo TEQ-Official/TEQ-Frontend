@@ -2,10 +2,7 @@ import React from "react";
 import ContactForm from "./ContactForm";
 import leftDoodle from "../../../public/left-screen-doodle.svg";
 import rightDoodle from "../../../public/right-screen-doodle.svg";
-import Image from "next/image";
 import PageDoodles from "../components/PageDoodles";
-import topHighlight from "../../../public/top-highlight.svg";
-import leftHighlight from "../../../public/left-highlight.svg";
 import middleHighlight from "../../../public/middle-highlight.svg";
 
 function ContactPage() {
@@ -17,7 +14,7 @@ function ContactPage() {
                         Get in touch
                     </h1>
                     <p className="text-[#667185] text-lg leading-[26px]">
-                        We're always available to respond to your messages
+                        We are always available to respond to your messages
                     </p>
                 </div>
                 <div>

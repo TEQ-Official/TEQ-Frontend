@@ -5,7 +5,6 @@ import NavigationHeader from "./components/Nav";
 import Footer from "./components/Footer";
 import topHighlight from "../../public/top-highlight.svg";
 import PageDoodles from "./components/PageDoodles";
-import Image from "next/image";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
