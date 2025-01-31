@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavigationHeader from "./components/Nav";
 import Footer from "./components/Footer";
+import topHighlight from "../../public/top-highlight.svg";
+import PageDoodles from "./components/PageDoodles";
+import Image from "next/image";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -27,11 +30,20 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
             >
                 <NavigationHeader />
                 {children}
                 <Footer />
+                <PageDoodles
+                    doodles={[
+                        {
+                            src: topHighlight,
+                            position:
+                                "absolute top-0 left-1/2 -translate-x-1/2",
+                        },
+                    ]}
+                />
             </body>
         </html>
     );

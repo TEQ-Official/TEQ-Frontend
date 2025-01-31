@@ -53,29 +53,29 @@ const links = [
 
 function Footer() {
     return (
-        <footer className="bg-[#000E22] text-white">
-            <div className="flex gap-10 pl-20 pr-[52px] pt-20 pb-6">
+        <footer className="bg-[#000E22] text-white text-sm lg:text-base">
+            <div className="w-[90%] mx-auto flex flex-col xl:flex-row gap-10 lg:pl-20 lg:pr-[52px] pt-20 pb-6">
                 <div className="flex flex-col gap-3">
                     <Logo color="white" />
                     <p className="w-[323px] text-[#98A2B3]">
-                        Join us on this journey as we hel you refine your
+                        Join us on this journey as we help you refine your
                         english knowledge
                     </p>
                 </div>
                 <div className="flex-1">
                     <div className="flex flex-col justify-between h-full gap-10 divide-y divide-white/20 ">
-                        <div className="flex justify-between">
-                            <div className="grid grid-cols-3 gap-[49.34px]">
+                        <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-0">
+                            <div className="grid sm:grid-cols-3 gap-[29.34px] sm:gap-[49.34px]">
                                 {links.map((link, index) => {
                                     return (
                                         <div
                                             key={index}
-                                            className="flex flex-col gap-10"
+                                            className="flex flex-col gap-5 sm:gap-10"
                                         >
-                                            <p className="font-semibold text-xl">
+                                            <p className="font-semibold text-lg lg:text-xl">
                                                 {link.title}
                                             </p>
-                                            <ul className="flex flex-col gap-10 text-[#98A2B3]">
+                                            <ul className="flex flex-col gap-5 sm:gap-10 text-[#98A2B3]">
                                                 {link.subLinks.map(
                                                     (subLink, linkIndex) => {
                                                         return (
@@ -110,7 +110,7 @@ function Footer() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex justify-between pt-[22px] text-[#D0D5DD]">
+                        <div className="flex flex-col-reverse lg:flex-row gap-4 lg:gap-0 justify-between pt-[22px] text-[#D0D5DD]">
                             <p className="">
                                 Copyright 2025 TheenglishCliniq.io. All Rights
                                 Reserved
