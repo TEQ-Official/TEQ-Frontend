@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 import MaleFemaleStudents from "../../../public/male-female-students.png";
 import { heroSectionValues } from "@/content/about";
-import { div } from "framer-motion/client";
 
 function HeroSection() {
     return (
