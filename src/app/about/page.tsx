@@ -59,7 +59,7 @@ function AboutPage() {
                                         <h4 className="text-[#101928] font-medium text-2xl lg:text-[28px] leading-9">
                                             {item.focus}
                                         </h4>
-                                        <p className="text-[#667185] text-base lg:text-lg leading-[26px] md:w-[75%]">
+                                        <p className="text-[#667185] text-base lg:text-lg leading-[26px] md:w-[85%] lg:w-[75%]">
                                             {item.description}
                                         </p>
                                     </div>

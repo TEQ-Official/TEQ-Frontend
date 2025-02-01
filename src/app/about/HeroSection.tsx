@@ -5,8 +5,8 @@ import { heroSectionValues } from "@/content/about";
 
 function HeroSection() {
     return (
-        <div className="w-[90%] max-w-[1228px] flex flex-col gap-12 xl:gap-[118px] mx-auto">
-            <div className="md:max-w-[507px] mx-auto">
+        <div className="w-[90%] max-w-[1228px] flex flex-col lg:flex-row gap-12 xl:gap-[118px] mx-auto">
+            <div className="lg:max-w-[507px] mx-auto">
                 <h1 className="text-[#101928] font-medium text-[40px] leading-[48px]">
                     About Us
                 </h1>
