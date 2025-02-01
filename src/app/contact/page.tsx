@@ -25,12 +25,12 @@ function ContactPage() {
                 doodles={[
                     {
                         src: leftDoodle,
-                        position: "top-0 left-0 w-[20%] opacity-70 md:opacity-100 lg:w-auto",
+                        position: "top-0 left-0 w-[20%] opacity-70 lg:opacity-100 lg:w-auto",
                     },
                     {
                         src: rightDoodle,
                         position:
-                            "bottom-0 right-0 w-[30%] opacity-70 md:opacity-100 lg:w-auto",
+                            "bottom-0 right-0 w-[30%] md:w-[23%] opacity-70 lg:opacity-100 lg:w-auto",
                     },
                     {
                         src: middleHighlight,

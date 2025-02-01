@@ -5,6 +5,7 @@ import NavigationHeader from "./components/Nav";
 import Footer from "./components/Footer";
 import topHighlight from "../../public/top-highlight.svg";
 import PageDoodles from "./components/PageDoodles";
+import { ReduxProvider } from "@/lib/provider";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -31,18 +32,20 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
             >
-                <NavigationHeader />
-                {children}
-                <Footer />
-                <PageDoodles
-                    doodles={[
-                        {
-                            src: topHighlight,
-                            position:
-                                "absolute top-0 left-1/2 -translate-x-1/2",
-                        },
-                    ]}
-                />
+                <ReduxProvider>
+                    <NavigationHeader />
+                    {children}
+                    <Footer />
+                    <PageDoodles
+                        doodles={[
+                            {
+                                src: topHighlight,
+                                position:
+                                    "absolute top-0 left-1/2 -translate-x-1/2",
+                            },
+                        ]}
+                    />
+                </ReduxProvider>
             </body>
         </html>
     );
