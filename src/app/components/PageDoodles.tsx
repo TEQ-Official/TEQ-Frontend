@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 function PageDoodles({
     doodles,
@@ -6,7 +9,12 @@ function PageDoodles({
     doodles: { src: string; position: string }[];
 }) {
     return (
-        <div className="absolute inset-0 -z-50 pointer-events-none">
+        <motion.div
+            initial={{ opacity: 0.1 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="absolute inset-0 -z-50 pointer-events-none"
+        >
             {doodles?.map((doodle, index) => (
                 <Image
                     key={index}
@@ -16,7 +24,7 @@ function PageDoodles({
                     className={`absolute ${doodle.position}`}
                 />
             ))}
-        </div>
+        </motion.div>
     );
 }
 
