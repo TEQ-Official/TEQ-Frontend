@@ -39,7 +39,7 @@ function NavigationHeader() {
     const dispatch = useDispatch();
     const showNav = useSelector((state: RootState) => state.navigation.showNav);
     return (
-        <header className="py-6">
+        <header className="py-8 md:mb-7">
             <div className="w-[88.89%] max-w-7xl flex items-center justify-between mx-auto">
                 <Link href="/">
                     <Logo color="blue" className="w-[86px] h-8" />
@@ -111,6 +111,7 @@ function NavigationHeader() {
                                                 ? "font-bold"
                                                 : ""
                                         }`}
+                                        onClick={() => dispatch(closeNav())}
                                     >
                                         {navItem.name}
                                     </Link>

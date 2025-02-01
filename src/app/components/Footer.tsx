@@ -54,10 +54,10 @@ const links = [
 function Footer() {
     return (
         <footer className="bg-[#000E22] text-white text-sm lg:text-base">
-            <div className="w-[90%] mx-auto flex flex-col xl:flex-row gap-10 lg:pl-20 lg:pr-[52px] pt-20 pb-6">
+            <div className="w-[90%] mx-auto flex flex-col xl:flex-row gap-10 xl:pl-20 xl:pr-[52px] pt-20 pb-6">
                 <div className="flex flex-col gap-3">
                     <Logo color="white" />
-                    <p className="w-[323px] text-[#98A2B3]">
+                    <p className="md:w-[323px] text-[#98A2B3]">
                         Join us on this journey as we help you refine your
                         english knowledge
                     </p>
