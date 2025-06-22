@@ -56,7 +56,7 @@ export default function Page() {
                 <div className="w-[90%] max-w-[1228px] mx-auto">
                     <button className="text-[#0047AB] mb-6">&larr; Back</button>
                     <section className='border p-6 md:mx-10'>
-                        <h1 className="text-xl mb-4 border-b py-1">Learner's Proficiency test</h1>
+                        <h1 className="text-xl mb-4 border-b py-1">Learner&#8216;s Proficiency test</h1>
 
                         <div className="grid md:grid-cols-4 gap-4 py-6 border-b">
                             <div className='pr-10'>
