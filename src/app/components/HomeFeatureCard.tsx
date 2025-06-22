@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 
-// components/FeatureCard.jsx
 export default function HomeFeatureCard({
     icon,
     title,

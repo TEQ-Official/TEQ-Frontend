@@ -3,7 +3,6 @@ import { BsStarFill } from "react-icons/bs";
 import { FaLocationDot } from "react-icons/fa6";
 import AnimatedSection from "./AnimatedSection";
 
-// components/HeroSection.jsx
 export default function HeroSection() {
     return (
         <section className="w-[90%] max-w-[1232px] md:px-20 mx-auto px-4 text-center py-12 md:py-20 relative">

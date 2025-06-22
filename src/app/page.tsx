@@ -115,7 +115,7 @@ export default function Home() {
                         Master English for Every <br className="hidden sm:block" /> Aspect of Your Life
                     </h2>
                     <p className="text-sm md:text-base text-gray-600 mt-4 max-w-2xl mx-auto">
-                        Whether you’re advancing your career, growing personally, or excelling in business, our tailored courses help you achieve fluency with confidence.
+                        Whether you&#8216;re advancing your career, growing personally, or excelling in business, our tailored courses help you achieve fluency with confidence.
                     </p>
                     <div className="mt-6">
                         <button className="bg-[#0047AB] text-white px-6 py-3 rounded-md font-medium transition-transform duration-300 hover:scale-110">

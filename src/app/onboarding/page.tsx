@@ -41,7 +41,7 @@ const proficiencyLevels = [
     }
 ];
 
-function page() {
+export default function Page() {
     const [selectedExam, setSelectedExam] = useState<string | null>(null);
     const [selectedLevel, setSelectedLevel] = useState<string | null>(null);
 
@@ -113,4 +113,3 @@ function page() {
     );
 }
 
-export default page

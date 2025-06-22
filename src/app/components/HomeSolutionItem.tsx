@@ -1,7 +1,5 @@
-// components/SolutionItem.tsx
 import React from "react";
 import Image from "next/image";
-import { FaPerson } from "react-icons/fa6";
 import AnimatedSection from "./AnimatedSection";
 
 export default function HomeSolutionItem({

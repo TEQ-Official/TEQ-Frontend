@@ -1,4 +1,3 @@
-// components/TestCard.tsx
 type TestCardProps = {
     title: string;
     description: string;
