@@ -1,18 +1,18 @@
 "use client"
 
 import { FaRegHandshake } from "react-icons/fa";
-import HeroSection from "./components/HeroSection";
-import HomeFeatureCard from "./components/HomeFeatureCard";
 import { BsBook, BsBuildingFillUp } from "react-icons/bs";
 import { HiOutlineUserGroup } from "react-icons/hi";
-import HomeSolutionItem from "./components/HomeSolutionItem";
 import { useState } from "react";
-import HomeAccordionItem from "./components/HomeAccordionItem";
-import AnimatedSection from "./components/AnimatedSection";
 import Image from "next/image";
-import SmallTestimonyCard from "./components/SmallTestimonyCard";
 import { RiSpeakFill } from "react-icons/ri";
 import { FaPeopleRoof } from "react-icons/fa6";
+import HeroSection from "@/components/home/HeroSection";
+import AnimatedSection from "@/components/shared/AnimatedSection";
+import HomeFeatureCard from "@/components/home/HomeFeatureCard";
+import HomeSolutionItem from "@/components/home/HomeSolutionItem";
+import HomeAccordionItem from "@/components/home/HomeAccordionItem";
+import SmallTestimonyCard from "@/components/SmallTestimonyCard";
 
 export default function Home() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);

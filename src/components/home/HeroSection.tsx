@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { BsStarFill } from "react-icons/bs";
 import { FaLocationDot } from "react-icons/fa6";
-import AnimatedSection from "./AnimatedSection";
+import AnimatedSection from "../shared/AnimatedSection";
 
 export default function HeroSection() {
     return (

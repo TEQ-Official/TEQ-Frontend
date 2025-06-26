@@ -9,32 +9,9 @@ import { AnimatePresence } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/lib/store";
 import { closeNav, openNav } from "@/lib/features/navSlice";
+import { navLinks } from "@/constants";
 
-interface INavLinks {
-    name: string;
-    link: string;
-}
-
-const navLinks: INavLinks[] = [
-    {
-        name: "About",
-        link: "/about",
-    },
-    {
-        name: "Services",
-        link: "/servicePage",
-    },
-    {
-        name: "Support",
-        link: "/support",
-    },
-    {
-        name: "Contact Us",
-        link: "/contact",
-    },
-];
-
-function NavigationHeader() {
+function Header() {
     const pathname = usePathname();
     const dispatch = useDispatch();
     const showNav = useSelector((state: RootState) => state.navigation.showNav);
@@ -125,4 +102,4 @@ function NavigationHeader() {
     );
 }
 
-export default NavigationHeader;
+export default Header;

@@ -1,26 +1,12 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import NavigationHeader from "./components/Nav";
-import Footer from "./components/Footer";
-import topHighlight from "../../public/top-highlight.svg";
-import PageDoodles from "./components/PageDoodles";
-import { ReduxProvider } from "@/lib/provider";
+import { Poppins } from "next/font/google"
+import { Providers } from "@/providers";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
+const poppins = Poppins({
     subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-    title: "TheEnglish-Cliniq",
-    description: "One Platform for all your English Needs.",
-};
+    weight: ["400", "500", "600", "700"],
+    variable: "--font-poppins",
+})
 
 export default function RootLayout({
     children,
@@ -30,22 +16,11 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
+                className={`${poppins.variable} antialiased relative`}
             >
-                <ReduxProvider>
-                    <NavigationHeader />
+                <Providers>
                     {children}
-                    <Footer />
-                    <PageDoodles
-                        doodles={[
-                            {
-                                src: topHighlight,
-                                position:
-                                    "absolute top-0 left-1/2 -translate-x-1/2",
-                            },
-                        ]}
-                    />
-                </ReduxProvider>
+                </Providers>
             </body>
         </html>
     );
