@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Head from 'next/head';
-import TestCard from '@/app/onboarding/TestCard';
+import TestCard from '@/components/onboarding/TestCard';
 import { IoCheckmarkCircle } from 'react-icons/io5';
 
 const examOptions = [

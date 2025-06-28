@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import AnimatedSection from "./AnimatedSection";
+import AnimatedSection from "../shared/AnimatedSection";
 
 export default function HomeSolutionItem({
   title,

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import MaleFemaleStudents from "../../../public/male-female-students.png";
 import { heroSectionValues } from "@/content/about";
 
 function HeroSection() {
@@ -17,16 +16,21 @@ function HeroSection() {
                     tailored resources, we help users transform their English
                     proficiency into English-centered career skills.
                 </p>
-                <Image
-                    src={MaleFemaleStudents}
-                    alt="Male and Female students"
-                    objectFit="cover"
-               />
+                <div className="relative aspect-[16/9] overflow-hidden">
+                    <Image
+                        src={"/male-female-students.png"}
+                        alt="Male and Female students"
+                        fill
+                        sizes="100vw"
+                        priority
+                        className="object-cover object-center rounded-3xl"
+                    />
+                </div>
             </div>
             <div className="flex flex-col gap-8">
                 <h3 className="font-semibold text-[32px] leading-10">We,</h3>
                 <div className="flex flex-col gap-10">
-                    {heroSectionValues.map((value, index)=> {
+                    {heroSectionValues.map((value, index) => {
                         return (
                             <div key={index} className="flex flex-col gap-4">
                                 <h4 className="font-medium text-2xl md:text-[28px] leading-9 tracking-[-0.56px] text-[#101928]">{value.point}</h4>

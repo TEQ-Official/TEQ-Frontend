@@ -1,14 +1,12 @@
 "use client";
+
 import React from "react";
-import Button from "../components/Button";
 import Image from "next/image";
-import StudentTeacher from "../../../public/student-teacher.png";
 import { focusData } from "@/content/about";
-import HeroSection from "./HeroSection";
-import PageDoodles from "../components/PageDoodles";
-import leftDoodle from "../../../public/left-screen-doodle.svg";
-import rightDoodle from "../../../public/right-screen-doodle.svg";
-import AnimatedSection from "../components/AnimatedSection";
+import AnimatedSection from "@/components/shared/AnimatedSection";
+import PageDoodles from "@/components/shared/PageDoodles";
+import HeroSection from "@/components/about/HeroSection";
+import Button from "@/components/Button";
 
 function AboutPage() {
     return (
@@ -20,7 +18,8 @@ function AboutPage() {
                 <PageDoodles
                     doodles={[
                         {
-                            src: rightDoodle,
+                            src: "/right-screen-doodle.svg",
+                            containerClass: "hidden md:block w-[20%] right-0 h-full",
                             position:
                                 "bottom-0 right-0 w-[30%] md:w-[23%] opacity-70 lg:opacity-100 lg:w-auto",
                         },
@@ -84,12 +83,15 @@ function AboutPage() {
                             </p>
                         </div>
                         <div className="flex flex-col items-center gap-10">
-                            <Image
-                                src={StudentTeacher}
-                                alt="student-teacher"
-                                className="w-full"
-                                objectFit="cover"
-                            />
+                            <div className="relative aspect-[16/9] h-full w-[80%] mx-auto overflow-hidden">
+                                <Image
+                                    src={"/student-teacher.png"}
+                                    alt="student-teacher"
+                                    fill
+                                    sizes="100vw"
+                                    className="object-cover object-center rounded-3xl"
+                                />
+                            </div>
                             <p className="max-w-[1055px] text-center text-base md:text-lg text-[#667185] leading-[26px]">
                                 We offer interactive lessons, customized
                                 learning plans, and flexible options like
@@ -124,7 +126,8 @@ function AboutPage() {
             <PageDoodles
                 doodles={[
                     {
-                        src: leftDoodle,
+                        src: "/left-screen-doodle.svg",
+                        containerClass: "hidden md:block w-[20%] h-full",
                         position:
                             "top-0 left-0 w-[20%] opacity-70 lg:opacity-100 lg:w-auto",
                     },

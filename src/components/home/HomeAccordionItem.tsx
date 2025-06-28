@@ -1,18 +1,19 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { FiPlus, FiMinus } from "react-icons/fi";
 
+type HomeAccordionItemProps = {
+    title: string;
+    content: string;
+    isOpen: boolean;
+    onClick: () => void;
+}
 
 export default function HomeAccordionItem({
     title,
     content,
     isOpen,
     onClick,
-}: {
-    title: string;
-    content: string;
-    isOpen: boolean;
-    onClick: () => void;
-}) {
+}: HomeAccordionItemProps) {
     return (
         <div>
             <div className="border border-gray-200 rounded-xl overflow-hidden">

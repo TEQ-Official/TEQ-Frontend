@@ -1,10 +1,7 @@
 import React from "react";
-import ContactForm from "./ContactForm";
-import leftDoodle from "../../../public/left-screen-doodle.svg";
-import rightDoodle from "../../../public/right-screen-doodle.svg";
-import PageDoodles from "../components/PageDoodles";
-import middleHighlight from "../../../public/middle-highlight.svg";
-import AnimatedSection from "../components/AnimatedSection";
+import AnimatedSection from "@/components/shared/AnimatedSection";
+import ContactForm from "@/forms/ContactForm";
+import PageDoodles from "@/components/shared/PageDoodles";
 
 function ContactPage() {
     return (
@@ -27,19 +24,22 @@ function ContactPage() {
             <PageDoodles
                 doodles={[
                     {
-                        src: leftDoodle,
+                        src: "/left-screen-doodle.svg",
+                        containerClass: "w-[20%] h-full",
                         position:
-                            "top-0 left-0 w-[20%] opacity-70 lg:opacity-100 lg:w-auto",
+                            "top-0 left-0 opacity-70 lg:opacity-100 w-[20%]",
                     },
                     {
-                        src: rightDoodle,
+                        src: "/right-screen-doodle.svg",
+                        containerClass: "w-[20%] right-0 h-full",
                         position:
-                            "bottom-0 right-0 w-[30%] md:w-[23%] opacity-70 lg:opacity-100 lg:w-auto",
+                            "bottom-0 right-0 h-[50%] opacity-70 lg:opacity-100 h-fit w-[30%] md:w-[23%]",
                     },
                     {
-                        src: middleHighlight,
+                        src: "/middle-highlight.svg",
+                        containerClass: "w-full h-full",
                         position:
-                            "top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 ",
+                            "top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2",
                     },
                 ]}
             />
