@@ -16,8 +16,8 @@ function Header() {
     const dispatch = useDispatch();
     const showNav = useSelector((state: RootState) => state.navigation.showNav);
     return (
-        <header className="py-8 md:mb-7">
-            <div className="w-[88.89%] max-w-7xl flex items-center justify-between mx-auto shadow-md p-6 rounded-md sticky top-0 z-50 bg-white">
+        <header className="sticky top-0 z-50  md:mb-7">
+            <div className="w-[88.89%] max-w-7xl flex items-center mt-5 bg- backdrop-blur-sm shadow-lg justify-between mx-auto p-6 rounded-md">
                 <Link href="/">
                     <Logo color="blue" className="w-[86px] h-8" />
                 </Link>
@@ -42,21 +42,21 @@ function Header() {
                 </nav>
                 <div className="hidden md:block">
                     <Link
-                        href="/contact"
-                        className={`${
-                            pathname === "/contact"
+                        href="/register"
+                        className={`bg-[#0047AB]/55 text-[#0047AB] px-4 py-2 rounded-md ${
+                            pathname === "/register"
                                 ? " font-bold"
                                 : " text-[#0047AB] font-medium"
                         }
                         `}
                     >
-                        Contact Us
+                        Get Started
                     </Link>
                 </div>
                 <div className="md:hidden" onClick={() => dispatch(openNav())}>
                     <AiOutlineMenu
                         size={20}
-                        className="transition-transform ease-in-out duration-300 hover:scale-110"
+                        className="cursor-pointer transition-transform ease-in-out duration-300 hover:scale-110"
                     />
                 </div>
             </div>
@@ -94,6 +94,17 @@ function Header() {
                                     </Link>
                                 );
                             })}
+                              <Link
+                        href="/register"
+                        className={`bg-[#0047AB]/55 text-white w-fit px-4 py-2 rounded-md ${
+                            pathname === "/register"
+                                ? " font-bold"
+                                : " text-[#0047AB] font-medium"
+                        }
+                        `}
+                    >
+                        Get Started
+                    </Link>
                         </ul>
                     </div>
                 </div>
