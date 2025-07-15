@@ -7,7 +7,7 @@ export const navLinks: INavLinks[] = [
     },
     {
         name: "Services",
-        link: "/servicePage",
+        link: "/services",
     },
     {
         name: "Support",
@@ -16,5 +16,9 @@ export const navLinks: INavLinks[] = [
     {
         name: "Contact Us",
         link: "/contact",
+    },
+    {
+        name: "Pricing",
+        link: "/pricing",
     },
 ];

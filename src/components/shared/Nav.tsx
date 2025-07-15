@@ -17,13 +17,13 @@ function Header() {
     const showNav = useSelector((state: RootState) => state.navigation.showNav);
     return (
         <header className="py-8 md:mb-7">
-            <div className="w-[88.89%] max-w-7xl flex items-center justify-between mx-auto">
+            <div className="w-[88.89%] max-w-7xl flex items-center justify-between mx-auto shadow-md p-6 rounded-md sticky top-0 z-50 bg-white">
                 <Link href="/">
                     <Logo color="blue" className="w-[86px] h-8" />
                 </Link>
                 <nav className="hidden md:block">
                     <ul className="flex items-center gap-4 justify-center">
-                        {navLinks.slice(0, 3).map((navItem, index) => {
+                        {navLinks.map((navItem, index) => {
                             return (
                                 <Link
                                     href={navItem.link}
