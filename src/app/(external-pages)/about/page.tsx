@@ -1,19 +1,13 @@
 "use client";
 
 import React from "react";
-import {ArrowRightCircle,MoveUpRight} from "lucide-react"
+import {MoveUpRight} from "lucide-react"
 import Image from "next/image";
 import { aceEnglishGoals, focusData } from "@/content/about";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import PageDoodles from "@/components/shared/PageDoodles";
 import HeroSection from "@/components/about/HeroSection";
 import Button from "@/components/Button";
-
-const colors = [
-    "#d6fff6",
-    "#fcffd9",
-    "#f9ddf6"
-]
 
 function AboutPage() {
   return (
@@ -40,7 +34,7 @@ function AboutPage() {
           We help you ace your your English Goals
         </h1>
         <p className="text- text-center font-semibold text-[18px] opacity-60 !m-0 !p-0 ">
-          We've helped student's like you, join us today!!
+          We&apos;ve helped student&apos;s like you, join us today!!
         </p>
         <div>
           <div className="mt-8 flex flex-col md:flex-row  gap-4 items-center justify-center gap-y-8 md:gap-y-6 w-[90%] max-w-[1228px] mx-auto">

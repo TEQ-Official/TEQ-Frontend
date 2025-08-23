@@ -1,8 +1,5 @@
+import { INavState } from "@/types";
 import { createSlice } from "@reduxjs/toolkit";
-
-interface INavState {
-    showNav: boolean
-}
 
 const initialState: INavState = {
     showNav: false

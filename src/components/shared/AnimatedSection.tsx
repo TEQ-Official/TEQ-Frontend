@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-function AnimatedSection({ children, ...props }: {children: React.ReactNode}) {
+function AnimatedSection({ children, className, ...props }: {children: React.ReactNode, className?: string}) {
     const { ref, inView } = useInView({
         triggerOnce: true, // Trigger animation only once
         threshold: 0.1, // 20% of the section is visible
@@ -15,6 +15,7 @@ function AnimatedSection({ children, ...props }: {children: React.ReactNode}) {
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            className={className}
             {...props}
         >
             {children}
