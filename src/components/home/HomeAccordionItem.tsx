@@ -19,10 +19,10 @@ export default function HomeAccordionItem({
             <div className="border border-gray-200 rounded-xl overflow-hidden">
                 <button
                     onClick={onClick}
-                    className="w-full flex justify-between items-center px-4 py-4 text-xl md:text-base text-left font-semibold text-gray-900 focus:outline-none"
+                    className="w-full flex justify-between items-center px-4 py-4 text-base lg:text-lg text-left font-semibold text-gray-900 focus:outline-none"
                 >
                     {title}
-                    <span className="text-xl">
+                    <span className="sm:text-xl">
                         {isOpen ? <FiMinus /> : <FiPlus />}
                     </span>
                 </button>
@@ -42,7 +42,7 @@ export default function HomeAccordionItem({
                         className="overflow-hidden"
                     >
                         <div
-                            className="p-4 mt-2 bg-[#F7F9FC] text-gray-600 rounded-xl transition-all duration-300 ease-in-out"
+                            className="p-4 mt-2 bg-[#F7F9FC] text-gray-600 rounded-xl transition-all duration-300 ease-in-out text-sm sm:text-base"
                         >
                             {content}
                         </div>

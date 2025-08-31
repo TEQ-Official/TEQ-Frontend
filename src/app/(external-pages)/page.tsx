@@ -1,23 +1,19 @@
 "use client"
 
-import { FaRegHandshake } from "react-icons/fa";
-import { BsBook, BsBuildingFillUp } from "react-icons/bs";
-import { HiOutlineUserGroup } from "react-icons/hi";
 import { useState } from "react";
 import Image from "next/image";
-import { RiSpeakFill } from "react-icons/ri";
-import { FaPeopleRoof } from "react-icons/fa6";
 import HeroSection from "@/components/home/HeroSection";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import HomeFeatureCard from "@/components/home/HomeFeatureCard";
 import HomeSolutionItem from "@/components/home/HomeSolutionItem";
 import HomeAccordionItem from "@/components/home/HomeAccordionItem";
-import SmallTestimonyCard from "@/components/SmallTestimonyCard";
+import SmallTestimonyCard from "@/components/home/SmallTestimonyCard";
+import { items } from "@/content/home";
+import { FaRegHandshake } from "react-icons/fa6";
+import { HiOutlineUserGroup } from "react-icons/hi";
+import { BsBook } from "react-icons/bs";
 
-export default function Home() {
-    const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-    const cards = [
+export const cards = [
         {
             title: "Business purposes",
             description:
@@ -33,7 +29,7 @@ export default function Home() {
                 "Build confidence, connect with people worldwide, and unlock new opportunities for personal growth.",
             icon: <BsBook />,
             iconbgColor: "",
-            bgColor: "bg-gradient-to-br from-[#1B6C2D] to-[#2FB56B] mt-16",
+            bgColor: "bg-gradient-to-br from-[#1B6C2D] to-[#2FB56B] lg:mt-16",
             ringphoto: '/ringphotogreen.png',
         },
         {
@@ -42,20 +38,17 @@ export default function Home() {
                 "Advance your career, expand your professional network, and achieve your goals with fluent English.",
             icon: <HiOutlineUserGroup />,
             iconbgColor: "",
-            bgColor: "bg-gradient-to-br from-[#803519] to-[#DA6336] mt-32",
+            bgColor: "bg-gradient-to-br from-[#803519] to-[#DA6336] lg:mt-32",
             ringphoto: '/ringphotored.png',
         },
     ];
-    const solutions = [
+export const solutions = [
         {
             title: "Exam Preparation",
             description:
                 "Resources and courses for international exams like IELTS, TOEFL, SAT, GRE, and GMAT.",
             image: "/SolutionImage1.png",
             bgColor: "bg-[#FFF9F1]",
-            icon: <RiSpeakFill />,
-            iconbgColor: "bg-[#FFE9CC]",
-            iconColor: "text-[#DA9829]",
         },
         {
             title: "Personalised Tutoring",
@@ -63,9 +56,6 @@ export default function Home() {
                 "Proficient tutors for one-on-one classes, providing tailored guidance and support.",
             image: "/SolutionImage3.png",
             bgColor: "bg-[#F1FFF7]",
-            icon: <FaPeopleRoof />,
-            iconbgColor: "bg-[#D2FFE5]",
-            iconColor: "text-[#13A04E]",
         },
         {
             title: "Career Transformation",
@@ -73,33 +63,11 @@ export default function Home() {
                 "Course modules to help you transform your language knowledge into high paying career skills.",
             image: "/SolutionImage2.png",
             bgColor: "bg-[#FFF1FB]",
-            icon: <BsBuildingFillUp />,
-            iconbgColor: "bg-[#FFCDF1]",
-            iconColor: "text-[#910068]",
         },
     ];
-    const items = [
-        {
-            title: "Career Guidance",
-            content:
-                "Unlock your potential with personalized career advice. Whether you're exploring new opportunities or aiming for your next big move.",
-        },
-        {
-            title: "Scholarship & Aid",
-            content:
-                "Get support navigating funding opportunities and application processes for local and international scholarships.",
-        },
-        {
-            title: "Postgraduate support",
-            content:
-                "Guidance to help you succeed in graduate school applications, scholarships, research programs, and beyond.",
-        },
-        {
-            title: "Pre-Departure Guidance for Study Abroad",
-            content:
-                "Receive expert advice on visa applications, documentation, and cultural preparedness before your journey.",
-        },
-    ];
+
+export default function Home() {
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     const handleToggle = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
@@ -108,17 +76,19 @@ export default function Home() {
 
     return (
         <main>
-            <HeroSection />
+            <section className="bg-gradient-to-b from-[#F2EEFF] via-[#FFF4F4] to-[#FFFFFF] sm:mx-4 rounded-3xl -mt-16">
+                <HeroSection />
+            </section>
             <AnimatedSection>
-                <section className="hidden lg:block py-20 md:px-20 w-[90%] max-w-[1232px] mx-auto text-center">
-                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900">
+                <section className="py-16 md:p-20 w-[90%] max-w-[1232px] mx-auto text-center">
+                    <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900">
                         Master English for Every <br className="hidden sm:block" /> Aspect of Your Life
                     </h2>
-                    <p className="text-sm md:text-base text-gray-600 mt-4 max-w-2xl mx-auto">
+                    <p className="text-sm sm:text-base text-gray-600 mt-4 max-w-2xl mx-auto">
                         Whether you&#8216;re advancing your career, growing personally, or excelling in business, our tailored courses help you achieve fluency with confidence.
                     </p>
                     <div className="mt-6">
-                        <button className="bg-[#0047AB] text-white px-6 py-3 rounded-md font-medium transition-transform duration-300 hover:scale-110">
+                        <button className="bg-[#0047AB] text-white px-8 py-3 rounded-xl font-medium text-sm sm:text-base transition-transform duration-300 hover:scale-110">
                             Join our waitlist
                         </button>
                     </div>
@@ -127,27 +97,19 @@ export default function Home() {
                             <HomeFeatureCard key={index} {...card} />
                         ))}
                     </div>
-                </section></AnimatedSection>
-            <section className="bg-[#0047AB] md:bg-white">
-                <div className="py-20 md:px-20 w-[90%] max-w-[1232px] mx-auto">
+                </section>
+            </AnimatedSection>
+            <section className="bg-white">
+                <div className="py-16 md:p-20 w-[90%] max-w-[1232px] mx-auto">
                     <AnimatedSection>
-                        <div className="hidden md:block text-center mb-12">
-                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900">
+                        <div className="text-center mb-12">
+                            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900">
                                 Our Comprehensive <br className="hidden sm:block" />
                                 English Learning Solutions
                             </h2>
-                            <p className="mt-4 text-sm md:text-base text-gray-600 max-w-xl mx-auto">
+                            <p className="mt-4 text-sm sm:text-base text-gray-600 max-w-xl mx-auto">
                                 Join thousands of learners worldwide and experience a proven approach to mastering English.
                             </p>
-                        </div>
-                        <div className="md:hidden text-white text-center space-y-8 pb-20">
-                            <h1 className="text-3xl font-bold">Learn English for Business Purposes, Personal Development, and Professional Growth</h1>
-                            <p className="text-lg">Catering to all level and categories of English learners.</p>
-                            <button className="bg-white text-[#1D2739] text-xl font-semibold py-3 px-10 rounded-xl">Join our waitlist</button>
-                        </div>
-                        <div className="md:hidden py-20 space-y-5 text-center">
-                            <p className="bg-white text-[#0047AB] p-2 inline-flex items-center gap-2 text-xs sm:text-base rounded-full">Guaranteed to make <span><Image src="/ielts.png" alt="ielts" width={100} height={100} /></span> be a walk in the park</p>
-                            <h1 className="text-3xl text-white font-medium">English Learning for <br /> Everyone</h1>
                         </div>
                     </AnimatedSection>
                     <div className="space-y-10">
@@ -158,10 +120,10 @@ export default function Home() {
                 </div>
             </section>
             <AnimatedSection>
-                <section className="pt-24 py-64 md:px-20 w-[90%] max-w-[1232px] mx-auto">
+                <section className="pt-16 pb-64 md:px-20 w-[90%] max-w-[1232px] mx-auto">
                     <div className="flex flex-col md:flex-row md:items-start gap-8">
                         <div className="md:w-1/3 lg:w-1/2">
-                            <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-gray-900">
+                            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900">
                                 Built to help <br className="hidden md:block" /> you with:
                             </h2>
                         </div>
@@ -182,13 +144,13 @@ export default function Home() {
             <AnimatedSection>
                 <section className="bg-[#000E22] pt-1">
                     <div className="md:ps-16 -mt-40 w-[90%] max-w-[1232px] mx-auto bg-[#0047AB] rounded-2xl flex flex-col sm:flex-row items-center overflow-hidden">
-                        <div className="w-full sm:w-2/3 space-y-3 px-5 py-10">
-                            <h1 className="text-white text-4x md:text-5xl lg:text-6xl font-semibold">Ready to be <br /> lingually free?</h1>
-                            <p className="text-white pb-5 text-lg">Join thousand of learners and become an engligh guru</p>
-                            <button className="text-[#0047AB] bg-white py-3 px-8 rounded-xl text-lg">Join our waitlist</button>
+                        <div className="w-full sm:w-2/3 space-y-3 px-5 py-10 sm:py-20">
+                            <h1 className="text-white text-2xl sm:text-3xl lg:text-5xl font-semibold">Ready to be <br /> lingually free?</h1>
+                            <p className="text-white pb-5 text-sm sm:text-base">Join thousand of learners and become an engligh guru</p>
+                            <button className="text-[#0047AB] bg-white px-8 py-3 rounded-md font-medium text-sm sm:text-base transition-transform duration-300 hover:scale-110">Join our waitlist</button>
                         </div>
                         <div className="w-full sm:w-1/3 relative">
-                            <Image src='/image.png' alt='image' width={1000} height={1000} objectFit="cover" className="" />
+                            <Image src='/image.png' alt='image' width={1000} height={1000} objectFit="cover" className="max-w-[300px] flex justify-end ml-auto mr-0" />
                             <SmallTestimonyCard rotate={"-rotate-3"} />
                             <SmallTestimonyCard rotate={"-rotate-6 mt-3"} />
                             <SmallTestimonyCard rotate={"-rotate-12 mt-6"} />
